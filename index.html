@@ -32,21 +32,25 @@
         <div class="col-md-5">
           <div class="panel panel-default" >
             <div class="panel-heading">
-              <a href="source.txt">Source</a>
+              <a href="{{ sourceFile }}">Source</a>
             </div>
-            <div class="panel-body" >
-              {{ source }}
+            <div class="panel-body" ng-bind-html="sourceHtml">
+              
             </div>
           </div >
         </div>
-        <div class="col-md-1">Buttons</div>
+        <div class="col-md-1">
+          <button type="button" class="btn btn-default" ng-click="removeDuplicity()">>>><br />Odstranit<br />duplicity<br />>>></button>
+          <br /><br />
+          <button type="button" class="btn btn-default" ng-click="highlightDuplicity()">>>><br />Zvyraznit<br />duplicity<br />>>></button>
+        </div>
         <div class="col-md-5">
           <div class="panel panel-default" >
             <div class="panel-heading">
               Output
             </div>
-            <div class="panel-body" >
-              ....text...
+            <div class="panel-body" ng-bind-html="outputHtml">
+              
             </div>
           </div >
         </div>
